@@ -117,6 +117,12 @@ export class OrderableDirective implements AfterContentInit, OnDestroy {
 
     this.lastDraggingIndex = undefined;
     element.style.left = 'auto';
+
+    Array.from(document.querySelectorAll(`datatable-body-row datatable-body-cell:nth-child(${ prevPos.index + 1})`))
+      .forEach((column: HTMLElement) => {
+        column.style.left = 'auto';
+        column.classList.remove('dragging');
+      });
   }
 
   isTarget(model: any, event: any): any {

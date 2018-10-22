@@ -47,6 +47,7 @@ export class DraggableDirective implements OnDestroy, OnChanges {
     if (!this.isDragging) return;
 
     this.isDragging = false;
+    this.element.closest('ngx-datatable').classList.remove('dragging');
     this.element.classList.remove('dragging');
 
     if (this.subscription) {
@@ -104,9 +105,21 @@ export class DraggableDirective implements OnDestroy, OnChanges {
     const x = clientX - mouseDownPos.x;
     const y = clientY - mouseDownPos.y;
 
-    if (this.dragX) this.element.style.left = `${x}px`;
+    if (this.dragX) {
+
+      this.element.style.left = `${x}px`;
+      const headerCellsArr = Array.from(document.querySelectorAll('datatable-header-cell'));
+      const columnIndexToMove = headerCellsArr.indexOf(this.element) + 1;
+
+      Array.from(document.querySelectorAll(`datatable-body-row datatable-body-cell:nth-child(${columnIndexToMove})`))
+        .forEach((element: HTMLElement) => {
+          element.style.left = `${x}px`;
+          element.classList.add('dragging');
+      });
+    }
     if (this.dragY) this.element.style.top = `${y}px`;
 
+    this.element.closest('ngx-datatable').classList.add('dragging');
     this.element.classList.add('dragging');
 
     this.dragging.emit({
