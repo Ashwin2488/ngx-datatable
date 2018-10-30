@@ -22,9 +22,9 @@ export declare class DraggableDirective implements OnDestroy, OnChanges {
     constructor(element: ElementRef);
     ngOnChanges(changes: SimpleChanges): void;
     ngOnDestroy(): void;
-    onMouseup(event: MouseEvent): void;
-    onMousedown(event: MouseEvent): void;
-    move(event: MouseEvent, mouseDownPos: {
+    onMouseup(event: MouseEvent | TouchEvent): void;
+    onMousedown(event: MouseEvent | TouchEvent): void;
+    move(event: MouseEvent | TouchEvent, mouseDownPos: {
         x: number;
         y: number;
     }): void;

@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var rxjs_1 = require("rxjs");
 var operators_1 = require("rxjs/operators");
-var events_1 = require("../events");
 var LongPressDirective = /** @class */ (function () {
     function LongPressDirective() {
         this.pressEnabled = true;
@@ -38,17 +37,21 @@ var LongPressDirective = /** @class */ (function () {
     LongPressDirective.prototype.onMouseDown = function (event) {
         var _this = this;
         // don't do right/middle clicks
-        if (event.which !== 1 || !this.pressEnabled)
+        if ((event.which !== 1 || !this.pressEnabled) && event.type !== 'touchstart')
             return;
         // don't start drag if its on resize handle
         var target = event.target;
+        var clientX = event.clientX ||
+            (event.targetTouches && event.targetTouches[0].clientX);
+        var clientY = event.clientY ||
+            (event.targetTouches && event.targetTouches[0].clientY);
         if (target.classList.contains('resize-handle'))
             return;
-        this.mouseX = event.clientX;
-        this.mouseY = event.clientY;
+        this.mouseX = clientX;
+        this.mouseY = clientY;
         this.pressing = true;
         this.isLongPressing = false;
-        var mouseup = rxjs_1.fromEvent(document, 'mouseup');
+        var mouseup = rxjs_1.merge(rxjs_1.fromEvent(document, 'mouseup'), rxjs_1.fromEvent(document, 'touchend'));
         this.subscription = mouseup.subscribe(function (ev) { return _this.onMouseup(); });
         this.timeout = setTimeout(function () {
             _this.isLongPressing = true;
@@ -65,8 +68,12 @@ var LongPressDirective = /** @class */ (function () {
     };
     LongPressDirective.prototype.onMouseMove = function (event) {
         if (this.pressing && !this.isLongPressing) {
-            var xThres = Math.abs(event.clientX - this.mouseX) > 10;
-            var yThres = Math.abs(event.clientY - this.mouseY) > 10;
+            var clientX = event.clientX ||
+                (event.targetTouches && event.targetTouches[0].clientX);
+            var clientY = event.clientY ||
+                (event.targetTouches && event.targetTouches[0].clientY);
+            var xThres = Math.abs(clientX - this.mouseX) > 10;
+            var yThres = Math.abs(clientY - this.mouseY) > 10;
             if (xThres || yThres) {
                 this.endPress();
             }
@@ -141,6 +148,7 @@ var LongPressDirective = /** @class */ (function () {
     ], LongPressDirective.prototype, "isLongPress", null);
     __decorate([
         core_1.HostListener('mousedown', ['$event']),
+        core_1.HostListener('touchstart', ['$event']),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)

@@ -42,6 +42,7 @@ var DraggableDirective = /** @class */ (function () {
         if (!this.isDragging)
             return;
         this.isDragging = false;
+        this.element.closest('ngx-datatable').classList.remove('dragging');
         this.element.classList.remove('dragging');
         if (this.subscription) {
             this._destroySubscription();
@@ -59,11 +60,15 @@ var DraggableDirective = /** @class */ (function () {
         if (isDragElm && (this.dragX || this.dragY)) {
             event.preventDefault();
             this.isDragging = true;
-            var mouseDownPos_1 = { x: event.clientX, y: event.clientY };
-            var mouseup = rxjs_1.fromEvent(document, 'mouseup');
+            var clientX = event.clientX ||
+                (event.targetTouches && event.targetTouches[0].clientX);
+            var clientY = event.clientY ||
+                (event.targetTouches && event.targetTouches[0].clientY);
+            var mouseDownPos_1 = { x: clientX, y: clientY };
+            var mouseup = rxjs_1.merge(rxjs_1.fromEvent(document, 'mouseup'), rxjs_1.fromEvent(document, 'touchend'));
             this.subscription = mouseup
                 .subscribe(function (ev) { return _this.onMouseup(ev); });
-            var mouseMoveSub = rxjs_1.fromEvent(document, 'mousemove')
+            var mouseMoveSub = rxjs_1.merge(rxjs_1.fromEvent(document, 'mousemove'), rxjs_1.fromEvent(document, 'touchmove'))
                 .pipe(operators_1.takeUntil(mouseup))
                 .subscribe(function (ev) { return _this.move(ev, mouseDownPos_1); });
             this.subscription.add(mouseMoveSub);
@@ -77,12 +82,25 @@ var DraggableDirective = /** @class */ (function () {
     DraggableDirective.prototype.move = function (event, mouseDownPos) {
         if (!this.isDragging)
             return;
-        var x = event.clientX - mouseDownPos.x;
-        var y = event.clientY - mouseDownPos.y;
-        if (this.dragX)
+        var clientX = event.clientX ||
+            (event.targetTouches && event.targetTouches[0].clientX);
+        var clientY = event.clientY ||
+            (event.targetTouches && event.targetTouches[0].clientY);
+        var x = clientX - mouseDownPos.x;
+        var y = clientY - mouseDownPos.y;
+        if (this.dragX) {
             this.element.style.left = x + "px";
+            var headerCellsArr = Array.from(document.querySelectorAll('datatable-header-cell'));
+            var columnIndexToMove = headerCellsArr.indexOf(this.element) + 1;
+            Array.from(document.querySelectorAll("datatable-body-row datatable-body-cell:nth-child(" + columnIndexToMove + ")"))
+                .forEach(function (element) {
+                element.style.left = x + "px";
+                element.classList.add('dragging');
+            });
+        }
         if (this.dragY)
             this.element.style.top = y + "px";
+        this.element.closest('ngx-datatable').classList.add('dragging');
         this.element.classList.add('dragging');
         this.dragging.emit({
             event: event,

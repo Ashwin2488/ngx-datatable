@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var rxjs_1 = require("rxjs");
-var events_1 = require("../events");
 var operators_1 = require("rxjs/operators");
 var ResizeableDirective = /** @class */ (function () {
     function ResizeableDirective(element, renderer) {
@@ -46,21 +45,24 @@ var ResizeableDirective = /** @class */ (function () {
         var _this = this;
         var isHandle = (event.target).classList.contains('resize-handle');
         var initialWidth = this.element.clientWidth;
-        var mouseDownScreenX = event.screenX;
+        var mouseDownScreenX = event.screenX ||
+            (event.targetTouches && event.targetTouches[0].screenX);
         if (isHandle) {
             event.stopPropagation();
             this.resizing = true;
-            var mouseup = rxjs_1.fromEvent(document, 'mouseup');
+            var mouseup = rxjs_1.merge(rxjs_1.fromEvent(document, 'mouseup'), rxjs_1.fromEvent(document, 'touchend'));
             this.subscription = mouseup
                 .subscribe(function (ev) { return _this.onMouseup(); });
-            var mouseMoveSub = rxjs_1.fromEvent(document, 'mousemove')
+            var mouseMoveSub = rxjs_1.merge(rxjs_1.fromEvent(document, 'mousemove'), rxjs_1.fromEvent(document, 'touchmove'))
                 .pipe(operators_1.takeUntil(mouseup))
                 .subscribe(function (e) { return _this.move(e, initialWidth, mouseDownScreenX); });
             this.subscription.add(mouseMoveSub);
         }
     };
     ResizeableDirective.prototype.move = function (event, initialWidth, mouseDownScreenX) {
-        var movementX = event.screenX - mouseDownScreenX;
+        var screenX = event.screenX ||
+            (event.targetTouches && event.targetTouches[0].screenX);
+        var movementX = screenX - mouseDownScreenX;
         var newWidth = initialWidth + movementX;
         var overMinWidth = !this.minWidth || newWidth >= this.minWidth;
         var underMaxWidth = !this.maxWidth || newWidth <= this.maxWidth;
@@ -92,6 +94,7 @@ var ResizeableDirective = /** @class */ (function () {
     ], ResizeableDirective.prototype, "resize", void 0);
     __decorate([
         core_1.HostListener('mousedown', ['$event']),
+        core_1.HostListener('touchstart', ['$event']),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)

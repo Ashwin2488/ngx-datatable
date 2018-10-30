@@ -88,7 +88,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".ngx-datatable {\n  display: block;\n  overflow: hidden;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative;\n  -webkit-transform: translate3d(0, 0, 0);\n  /**\n   * Vertical Scrolling Adjustments\n   */\n  /**\n   * Horizontal Scrolling Adjustments\n   */\n  /**\n   * Fixed Header Height Adjustments\n   */\n  /**\n   * Fixed row height adjustments\n   */\n  /**\n   * Shared Styles\n   */\n  /**\n   * Header Styles\n   */\n  /**\n   * Body Styles\n   */\n  /**\n   * Footer Styles\n   */ }\n  .ngx-datatable [hidden] {\n    display: none !important; }\n  .ngx-datatable *, .ngx-datatable *:before, .ngx-datatable *:after {\n    -webkit-box-sizing: border-box;\n    box-sizing: border-box; }\n  .ngx-datatable.scroll-vertical .datatable-body {\n    overflow-y: auto; }\n  .ngx-datatable.scroll-vertical.virtualized .datatable-body .datatable-row-wrapper {\n    position: absolute; }\n  .ngx-datatable.scroll-horz .datatable-body {\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch; }\n  .ngx-datatable.fixed-header .datatable-header .datatable-header-inner {\n    white-space: nowrap; }\n    .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis; }\n  .ngx-datatable.fixed-row .datatable-scroll {\n    white-space: nowrap; }\n    .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row {\n      white-space: nowrap; }\n      .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-cell {\n        overflow: hidden;\n        white-space: nowrap;\n        text-overflow: ellipsis; }\n      .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-group-cell {\n        overflow: hidden;\n        white-space: nowrap;\n        text-overflow: ellipsis; }\n  .ngx-datatable .datatable-body-row,\n  .ngx-datatable .datatable-row-center,\n  .ngx-datatable .datatable-header-inner {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-flow: row;\n    -o-flex-flow: row;\n    flex-flow: row; }\n  .ngx-datatable .datatable-body-cell,\n  .ngx-datatable .datatable-header-cell {\n    overflow-x: hidden;\n    vertical-align: top;\n    display: inline-block;\n    line-height: 1.625; }\n    .ngx-datatable .datatable-body-cell:focus,\n    .ngx-datatable .datatable-header-cell:focus {\n      outline: none; }\n  .ngx-datatable .datatable-row-left,\n  .ngx-datatable .datatable-row-right {\n    z-index: 9; }\n  .ngx-datatable .datatable-row-left,\n  .ngx-datatable .datatable-row-center,\n  .ngx-datatable .datatable-row-group,\n  .ngx-datatable .datatable-row-right {\n    position: relative; }\n  .ngx-datatable .datatable-header {\n    display: block;\n    overflow: hidden; }\n    .ngx-datatable .datatable-header .datatable-header-inner {\n      -webkit-box-align: stretch;\n          -ms-flex-align: stretch;\n              align-items: stretch;\n      -webkit-align-items: stretch; }\n    .ngx-datatable .datatable-header .datatable-header-cell {\n      position: relative;\n      display: inline-block; }\n      .ngx-datatable .datatable-header .datatable-header-cell.sortable .datatable-header-cell-wrapper {\n        cursor: pointer; }\n      .ngx-datatable .datatable-header .datatable-header-cell.longpress .datatable-header-cell-wrapper {\n        cursor: move; }\n      .ngx-datatable .datatable-header .datatable-header-cell .sort-btn {\n        line-height: 100%;\n        vertical-align: middle;\n        display: inline-block;\n        cursor: pointer; }\n      .ngx-datatable .datatable-header .datatable-header-cell .resize-handle, .ngx-datatable .datatable-header .datatable-header-cell .resize-handle--not-resizable {\n        display: inline-block;\n        position: absolute;\n        right: 0;\n        top: 0;\n        bottom: 0;\n        width: 5px;\n        padding: 0 4px;\n        visibility: hidden; }\n      .ngx-datatable .datatable-header .datatable-header-cell .resize-handle {\n        cursor: ew-resize; }\n      .ngx-datatable .datatable-header .datatable-header-cell.resizeable:hover .resize-handle {\n        visibility: visible; }\n      .ngx-datatable .datatable-header .datatable-header-cell:hover .resize-handle--not-resizable {\n        visibility: visible; }\n      .ngx-datatable .datatable-header .datatable-header-cell .targetMarker {\n        position: absolute;\n        top: 0;\n        bottom: 0; }\n        .ngx-datatable .datatable-header .datatable-header-cell .targetMarker.dragFromLeft {\n          right: 0; }\n        .ngx-datatable .datatable-header .datatable-header-cell .targetMarker.dragFromRight {\n          left: 0; }\n      .ngx-datatable .datatable-header .datatable-header-cell .datatable-header-cell-template-wrap {\n        height: inherit; }\n  .ngx-datatable .datatable-body {\n    position: relative;\n    z-index: 10;\n    display: block; }\n    .ngx-datatable .datatable-body .datatable-scroll {\n      display: inline-block; }\n    .ngx-datatable .datatable-body .datatable-row-detail {\n      overflow-y: hidden; }\n    .ngx-datatable .datatable-body .datatable-row-wrapper {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n      flex-direction: column; }\n    .ngx-datatable .datatable-body .datatable-body-row {\n      outline: none; }\n      .ngx-datatable .datatable-body .datatable-body-row > div {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex; }\n  .ngx-datatable .datatable-footer {\n    display: block;\n    width: 100%; }\n    .ngx-datatable .datatable-footer .datatable-footer-inner {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      width: 100%; }\n    .ngx-datatable .datatable-footer .selected-count .page-count {\n      -webkit-box-flex: 1;\n          -ms-flex: 1 1 40%;\n              flex: 1 1 40%; }\n    .ngx-datatable .datatable-footer .selected-count .datatable-pager {\n      -webkit-box-flex: 1;\n          -ms-flex: 1 1 60%;\n              flex: 1 1 60%; }\n    .ngx-datatable .datatable-footer .page-count {\n      -webkit-box-flex: 1;\n          -ms-flex: 1 1 20%;\n              flex: 1 1 20%; }\n    .ngx-datatable .datatable-footer .datatable-pager {\n      -webkit-box-flex: 1;\n          -ms-flex: 1 1 80%;\n              flex: 1 1 80%;\n      text-align: right; }\n      .ngx-datatable .datatable-footer .datatable-pager .pager,\n      .ngx-datatable .datatable-footer .datatable-pager .pager li {\n        padding: 0;\n        margin: 0;\n        display: inline-block;\n        list-style: none; }\n      .ngx-datatable .datatable-footer .datatable-pager .pager li, .ngx-datatable .datatable-footer .datatable-pager .pager li a {\n        outline: none; }\n      .ngx-datatable .datatable-footer .datatable-pager .pager li a {\n        cursor: pointer;\n        display: inline-block; }\n      .ngx-datatable .datatable-footer .datatable-pager .pager li.disabled a {\n        cursor: not-allowed; }\n", ""]);
+exports.push([module.i, ".ngx-datatable {\n  display: block;\n  overflow: hidden;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative;\n  -webkit-transform: translate3d(0, 0, 0);\n  /**\r\n   * Vertical Scrolling Adjustments\r\n   */\n  /**\r\n   * Horizontal Scrolling Adjustments\r\n   */\n  /**\r\n   * Fixed Header Height Adjustments\r\n   */\n  /**\r\n   * Fixed row height adjustments\r\n   */\n  /**\r\n   * Shared Styles\r\n   */\n  /**\r\n   * Header Styles\r\n   */\n  /**\r\n   * Body Styles\r\n   */\n  /**\r\n   * Footer Styles\r\n   */ }\n  .ngx-datatable [hidden] {\n    display: none !important; }\n  .ngx-datatable *, .ngx-datatable *:before, .ngx-datatable *:after {\n    -webkit-box-sizing: border-box;\n    box-sizing: border-box; }\n  .ngx-datatable.scroll-vertical .datatable-body {\n    overflow-y: auto; }\n  .ngx-datatable.scroll-vertical.virtualized .datatable-body .datatable-row-wrapper {\n    position: absolute; }\n  .ngx-datatable.scroll-horz .datatable-body {\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch; }\n  .ngx-datatable.fixed-header .datatable-header .datatable-header-inner {\n    white-space: nowrap; }\n    .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis; }\n  .ngx-datatable.fixed-row .datatable-scroll {\n    white-space: nowrap; }\n    .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row {\n      white-space: nowrap; }\n      .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-cell {\n        overflow: hidden;\n        white-space: nowrap;\n        text-overflow: ellipsis; }\n      .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-group-cell {\n        overflow: hidden;\n        white-space: nowrap;\n        text-overflow: ellipsis; }\n  .ngx-datatable .datatable-body-row,\n  .ngx-datatable .datatable-row-center,\n  .ngx-datatable .datatable-header-inner {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-flow: row;\n    -o-flex-flow: row;\n    flex-flow: row; }\n  .ngx-datatable .datatable-body-cell,\n  .ngx-datatable .datatable-header-cell {\n    overflow-x: hidden;\n    vertical-align: top;\n    display: inline-block;\n    line-height: 1.625; }\n    .ngx-datatable .datatable-body-cell:focus,\n    .ngx-datatable .datatable-header-cell:focus {\n      outline: none; }\n  .ngx-datatable .datatable-row-left,\n  .ngx-datatable .datatable-row-right {\n    z-index: 9; }\n  .ngx-datatable .datatable-row-left,\n  .ngx-datatable .datatable-row-center,\n  .ngx-datatable .datatable-row-group,\n  .ngx-datatable .datatable-row-right {\n    position: relative; }\n  .ngx-datatable .datatable-header {\n    display: block;\n    overflow: hidden; }\n    .ngx-datatable .datatable-header .datatable-header-inner {\n      -webkit-box-align: stretch;\n          -ms-flex-align: stretch;\n              align-items: stretch;\n      -webkit-align-items: stretch; }\n    .ngx-datatable .datatable-header .datatable-header-cell {\n      position: relative;\n      display: inline-block; }\n      .ngx-datatable .datatable-header .datatable-header-cell.sortable .datatable-header-cell-wrapper {\n        cursor: pointer; }\n      .ngx-datatable .datatable-header .datatable-header-cell.longpress .datatable-header-cell-wrapper {\n        cursor: move; }\n      .ngx-datatable .datatable-header .datatable-header-cell .sort-btn {\n        line-height: 100%;\n        vertical-align: middle;\n        display: inline-block;\n        cursor: pointer; }\n      .ngx-datatable .datatable-header .datatable-header-cell .resize-handle, .ngx-datatable .datatable-header .datatable-header-cell .resize-handle--not-resizable {\n        display: inline-block;\n        position: absolute;\n        right: 0;\n        top: 0;\n        bottom: 0;\n        width: 5px;\n        padding: 0 4px;\n        visibility: hidden; }\n      .ngx-datatable .datatable-header .datatable-header-cell .resize-handle {\n        cursor: ew-resize; }\n      .ngx-datatable .datatable-header .datatable-header-cell.resizeable:hover .resize-handle {\n        visibility: visible; }\n      .ngx-datatable .datatable-header .datatable-header-cell:hover .resize-handle--not-resizable {\n        visibility: visible; }\n      .ngx-datatable .datatable-header .datatable-header-cell .targetMarker {\n        position: absolute;\n        top: 0;\n        bottom: 0; }\n        .ngx-datatable .datatable-header .datatable-header-cell .targetMarker.dragFromLeft {\n          right: 0; }\n        .ngx-datatable .datatable-header .datatable-header-cell .targetMarker.dragFromRight {\n          left: 0; }\n      .ngx-datatable .datatable-header .datatable-header-cell .datatable-header-cell-template-wrap {\n        height: inherit; }\n  .ngx-datatable .datatable-body {\n    position: relative;\n    z-index: 10;\n    display: block; }\n    .ngx-datatable .datatable-body .datatable-scroll {\n      display: inline-block; }\n    .ngx-datatable .datatable-body .datatable-row-detail {\n      overflow-y: hidden; }\n    .ngx-datatable .datatable-body .datatable-row-wrapper {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n      flex-direction: column; }\n    .ngx-datatable .datatable-body .datatable-body-row {\n      outline: none; }\n      .ngx-datatable .datatable-body .datatable-body-row > div {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex; }\n  .ngx-datatable .datatable-footer {\n    display: block;\n    width: 100%; }\n    .ngx-datatable .datatable-footer .datatable-footer-inner {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      width: 100%; }\n    .ngx-datatable .datatable-footer .selected-count .page-count {\n      -webkit-box-flex: 1;\n          -ms-flex: 1 1 40%;\n              flex: 1 1 40%; }\n    .ngx-datatable .datatable-footer .selected-count .datatable-pager {\n      -webkit-box-flex: 1;\n          -ms-flex: 1 1 60%;\n              flex: 1 1 60%; }\n    .ngx-datatable .datatable-footer .page-count {\n      -webkit-box-flex: 1;\n          -ms-flex: 1 1 20%;\n              flex: 1 1 20%; }\n    .ngx-datatable .datatable-footer .datatable-pager {\n      -webkit-box-flex: 1;\n          -ms-flex: 1 1 80%;\n              flex: 1 1 80%;\n      text-align: right; }\n      .ngx-datatable .datatable-footer .datatable-pager .pager,\n      .ngx-datatable .datatable-footer .datatable-pager .pager li {\n        padding: 0;\n        margin: 0;\n        display: inline-block;\n        list-style: none; }\n      .ngx-datatable .datatable-footer .datatable-pager .pager li, .ngx-datatable .datatable-footer .datatable-pager .pager li a {\n        outline: none; }\n      .ngx-datatable .datatable-footer .datatable-pager .pager li a {\n        cursor: pointer;\n        display: inline-block; }\n      .ngx-datatable .datatable-footer .datatable-pager .pager li.disabled a {\n        cursor: not-allowed; }\n", ""]);
 
 // exports
 
@@ -5298,6 +5298,7 @@ var DraggableDirective = /** @class */ (function () {
         if (!this.isDragging)
             return;
         this.isDragging = false;
+        this.element.closest('ngx-datatable').classList.remove('dragging');
         this.element.classList.remove('dragging');
         if (this.subscription) {
             this._destroySubscription();
@@ -5315,11 +5316,15 @@ var DraggableDirective = /** @class */ (function () {
         if (isDragElm && (this.dragX || this.dragY)) {
             event.preventDefault();
             this.isDragging = true;
-            var mouseDownPos_1 = { x: event.clientX, y: event.clientY };
-            var mouseup = rxjs_1.fromEvent(document, 'mouseup');
+            var clientX = event.clientX ||
+                (event.targetTouches && event.targetTouches[0].clientX);
+            var clientY = event.clientY ||
+                (event.targetTouches && event.targetTouches[0].clientY);
+            var mouseDownPos_1 = { x: clientX, y: clientY };
+            var mouseup = rxjs_1.merge(rxjs_1.fromEvent(document, 'mouseup'), rxjs_1.fromEvent(document, 'touchend'));
             this.subscription = mouseup
                 .subscribe(function (ev) { return _this.onMouseup(ev); });
-            var mouseMoveSub = rxjs_1.fromEvent(document, 'mousemove')
+            var mouseMoveSub = rxjs_1.merge(rxjs_1.fromEvent(document, 'mousemove'), rxjs_1.fromEvent(document, 'touchmove'))
                 .pipe(operators_1.takeUntil(mouseup))
                 .subscribe(function (ev) { return _this.move(ev, mouseDownPos_1); });
             this.subscription.add(mouseMoveSub);
@@ -5333,12 +5338,25 @@ var DraggableDirective = /** @class */ (function () {
     DraggableDirective.prototype.move = function (event, mouseDownPos) {
         if (!this.isDragging)
             return;
-        var x = event.clientX - mouseDownPos.x;
-        var y = event.clientY - mouseDownPos.y;
-        if (this.dragX)
+        var clientX = event.clientX ||
+            (event.targetTouches && event.targetTouches[0].clientX);
+        var clientY = event.clientY ||
+            (event.targetTouches && event.targetTouches[0].clientY);
+        var x = clientX - mouseDownPos.x;
+        var y = clientY - mouseDownPos.y;
+        if (this.dragX) {
             this.element.style.left = x + "px";
+            var headerCellsArr = Array.from(document.querySelectorAll('datatable-header-cell'));
+            var columnIndexToMove = headerCellsArr.indexOf(this.element) + 1;
+            Array.from(document.querySelectorAll("datatable-body-row datatable-body-cell:nth-child(" + columnIndexToMove + ")"))
+                .forEach(function (element) {
+                element.style.left = x + "px";
+                element.classList.add('dragging');
+            });
+        }
         if (this.dragY)
             this.element.style.top = y + "px";
+        this.element.closest('ngx-datatable').classList.add('dragging');
         this.element.classList.add('dragging');
         this.dragging.emit({
             event: event,
@@ -5427,7 +5445,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("@angular/core");
 var rxjs_1 = __webpack_require__("rxjs");
 var operators_1 = __webpack_require__("rxjs/operators");
-var events_1 = __webpack_require__("./src/events.ts");
 var LongPressDirective = /** @class */ (function () {
     function LongPressDirective() {
         this.pressEnabled = true;
@@ -5453,17 +5470,21 @@ var LongPressDirective = /** @class */ (function () {
     LongPressDirective.prototype.onMouseDown = function (event) {
         var _this = this;
         // don't do right/middle clicks
-        if (event.which !== 1 || !this.pressEnabled)
+        if ((event.which !== 1 || !this.pressEnabled) && event.type !== 'touchstart')
             return;
         // don't start drag if its on resize handle
         var target = event.target;
+        var clientX = event.clientX ||
+            (event.targetTouches && event.targetTouches[0].clientX);
+        var clientY = event.clientY ||
+            (event.targetTouches && event.targetTouches[0].clientY);
         if (target.classList.contains('resize-handle'))
             return;
-        this.mouseX = event.clientX;
-        this.mouseY = event.clientY;
+        this.mouseX = clientX;
+        this.mouseY = clientY;
         this.pressing = true;
         this.isLongPressing = false;
-        var mouseup = rxjs_1.fromEvent(document, 'mouseup');
+        var mouseup = rxjs_1.merge(rxjs_1.fromEvent(document, 'mouseup'), rxjs_1.fromEvent(document, 'touchend'));
         this.subscription = mouseup.subscribe(function (ev) { return _this.onMouseup(); });
         this.timeout = setTimeout(function () {
             _this.isLongPressing = true;
@@ -5480,8 +5501,12 @@ var LongPressDirective = /** @class */ (function () {
     };
     LongPressDirective.prototype.onMouseMove = function (event) {
         if (this.pressing && !this.isLongPressing) {
-            var xThres = Math.abs(event.clientX - this.mouseX) > 10;
-            var yThres = Math.abs(event.clientY - this.mouseY) > 10;
+            var clientX = event.clientX ||
+                (event.targetTouches && event.targetTouches[0].clientX);
+            var clientY = event.clientY ||
+                (event.targetTouches && event.targetTouches[0].clientY);
+            var xThres = Math.abs(clientX - this.mouseX) > 10;
+            var yThres = Math.abs(clientY - this.mouseY) > 10;
             if (xThres || yThres) {
                 this.endPress();
             }
@@ -5556,6 +5581,7 @@ var LongPressDirective = /** @class */ (function () {
     ], LongPressDirective.prototype, "isLongPress", null);
     __decorate([
         core_1.HostListener('mousedown', ['$event']),
+        core_1.HostListener('touchstart', ['$event']),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
@@ -5686,11 +5712,16 @@ var OrderableDirective = /** @class */ (function () {
         }
         this.lastDraggingIndex = undefined;
         element.style.left = 'auto';
+        Array.from(document.querySelectorAll("datatable-body-row datatable-body-cell:nth-child(" + (prevPos.index + 1) + ")"))
+            .forEach(function (column) {
+            column.style.left = 'auto';
+            column.classList.remove('dragging');
+        });
     };
     OrderableDirective.prototype.isTarget = function (model, event) {
         var i = 0;
-        var x = event.x || event.clientX;
-        var y = event.y || event.clientY;
+        var x = event.x || event.clientX || (event.changedTouches && event.changedTouches[0].clientX);
+        var y = event.y || event.clientY || (event.changedTouches && event.changedTouches[0].clientY);
         var targets = this.document.elementsFromPoint(x, y);
         var _loop_1 = function (prop) {
             // current column position which throws event.
@@ -5759,7 +5790,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("@angular/core");
 var rxjs_1 = __webpack_require__("rxjs");
-var events_1 = __webpack_require__("./src/events.ts");
 var operators_1 = __webpack_require__("rxjs/operators");
 var ResizeableDirective = /** @class */ (function () {
     function ResizeableDirective(element, renderer) {
@@ -5794,21 +5824,24 @@ var ResizeableDirective = /** @class */ (function () {
         var _this = this;
         var isHandle = (event.target).classList.contains('resize-handle');
         var initialWidth = this.element.clientWidth;
-        var mouseDownScreenX = event.screenX;
+        var mouseDownScreenX = event.screenX ||
+            (event.targetTouches && event.targetTouches[0].screenX);
         if (isHandle) {
             event.stopPropagation();
             this.resizing = true;
-            var mouseup = rxjs_1.fromEvent(document, 'mouseup');
+            var mouseup = rxjs_1.merge(rxjs_1.fromEvent(document, 'mouseup'), rxjs_1.fromEvent(document, 'touchend'));
             this.subscription = mouseup
                 .subscribe(function (ev) { return _this.onMouseup(); });
-            var mouseMoveSub = rxjs_1.fromEvent(document, 'mousemove')
+            var mouseMoveSub = rxjs_1.merge(rxjs_1.fromEvent(document, 'mousemove'), rxjs_1.fromEvent(document, 'touchmove'))
                 .pipe(operators_1.takeUntil(mouseup))
                 .subscribe(function (e) { return _this.move(e, initialWidth, mouseDownScreenX); });
             this.subscription.add(mouseMoveSub);
         }
     };
     ResizeableDirective.prototype.move = function (event, initialWidth, mouseDownScreenX) {
-        var movementX = event.screenX - mouseDownScreenX;
+        var screenX = event.screenX ||
+            (event.targetTouches && event.targetTouches[0].screenX);
+        var movementX = screenX - mouseDownScreenX;
         var newWidth = initialWidth + movementX;
         var overMinWidth = !this.minWidth || newWidth >= this.minWidth;
         var underMaxWidth = !this.maxWidth || newWidth <= this.maxWidth;
@@ -5840,6 +5873,7 @@ var ResizeableDirective = /** @class */ (function () {
     ], ResizeableDirective.prototype, "resize", void 0);
     __decorate([
         core_1.HostListener('mousedown', ['$event']),
+        core_1.HostListener('touchstart', ['$event']),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
@@ -5953,8 +5987,26 @@ exports.VisibilityDirective = VisibilityDirective;
 Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.MouseEvent = ((typeof window !== 'undefined' && window) || global).MouseEvent;
+exports.TouchEvent = ((typeof window !== 'undefined' && window) || global).TouchEvent;
 exports.KeyboardEvent = ((typeof window !== 'undefined' && window) || global).KeyboardEvent;
 exports.Event = ((typeof window !== 'undefined' && window) || global).Event;
+//polyfill for element.closest for ie
+if (!Element.prototype.matches)
+    Element.prototype.matches = Element.prototype.msMatchesSelector ||
+        Element.prototype.webkitMatchesSelector;
+if (!Element.prototype.closest) {
+    Element.prototype.closest = function (s) {
+        var el = this;
+        if (!document.documentElement.contains(el))
+            return null;
+        do {
+            if (el.matches(s))
+                return el;
+            el = el.parentElement || el.parentNode;
+        } while (el !== null && el.nodeType === 1);
+        return null;
+    };
+}
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/webpack/buildin/global.js")))
 
